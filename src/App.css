@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.compte-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f0f4f8;
 }
 
-.App-link {
-  color: #61dafb;
+.compte-card {
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
+.compte-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.compte-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.transaction-list {
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.transaction-list h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.transaction-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transaction-list li {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e5e5e5;
+  color: #444;
+}
+
+.transaction-list li:last-child {
+  border-bottom: none;
+}
+
+.statistics-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #7ed6df, #22a6b3);
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.statistics-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.stat-card {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.stat-card p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  animation: fade-in 1s infinite alternate;
+}
+
+@keyframes fade-in {
   from {
-    transform: rotate(0deg);
+    opacity: 0.5;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
